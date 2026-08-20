@@ -594,3 +594,21 @@ SERVICES SECTION
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+.service-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 132, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  color: #0084ff; /* Icon accent color */
+}
+
+.service-icon svg {
+  width: 27px;
+  height: 27px;
+  stroke: currentColor;
+}
