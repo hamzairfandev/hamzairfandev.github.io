@@ -10,7 +10,9 @@ RESPONSIVE MEDIA QUERIES & FIXED MOBILE MENU
 }
 
 @media (max-width: 992px) {
-.hero { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; padding: 12rem 2rem 5rem 2rem; }
+.hero { 
+  grid-template-columns: 1fr; text-align: center; gap: 2.5rem; padding: 12rem 2rem 5rem 2rem; 
+}
 .hero-content p { margin: 0 auto 2rem auto; }
 .hero-btns { justify-content: center; flex-direction: column; }
 .hero-btns a { display: block; width: 100%; }
