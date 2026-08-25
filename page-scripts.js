@@ -1,34 +1,31 @@
-// Fixed Mobile Navigation & Scroll Lock Logic
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
-const navOverlay = document.getElementById('navOverlay');
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menuToggle');
+  const menuClose = document.getElementById('menuClose');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const drawerOverlay = document.getElementById('drawerOverlay');
+  const drawerLinks = document.querySelectorAll('.drawer-link, .drawer-btn');
 
-function closeMenu() {
-  navLinks.classList.remove('open');
-  navOverlay.classList.remove('active');
-  document.body.classList.remove('nav-active');
-  menuToggle.innerHTML = '&#9776;';
-}
+  // Open Drawer Function
+  const openMenu = () => {
+    mobileDrawer.classList.add('active');
+    drawerOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevents background body scrolling
+  };
 
-function openMenu() {
-  navLinks.classList.add('open');
-  navOverlay.classList.add('active');
-  document.body.classList.add('nav-active');
-  menuToggle.innerHTML = '&#10005;';
-}
+  // Close Drawer Function
+  const closeMenu = () => {
+    mobileDrawer.classList.remove('active');
+    drawerOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  };
 
-if (menuToggle && navLinks && navOverlay) {
-  menuToggle.addEventListener('click', () => {
-    if (navLinks.classList.contains('open')) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  });
+  // Event Listeners
+  if (menuToggle) menuToggle.addEventListener('click', openMenu);
+  if (menuClose) menuClose.addEventListener('click', closeMenu);
+  if (drawerOverlay) drawerOverlay.addEventListener('click', closeMenu);
 
-  navOverlay.addEventListener('click', closeMenu);
-
-  document.querySelectorAll('.nav-links a').forEach(link => {
+  // Close menu automatically when any item inside the drawer is clicked
+  drawerLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
   });
-}
+});
