@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Hamza Project Portfolio</title>
+<title>Hamza Irfan Dev</title>
 <link rel="stylesheet" href="common-styles.css">
 <link rel="stylesheet" href="homepage.css">
 <link rel="stylesheet" href="responsive.css">
+
 </head>
 <body>
-<!-- MOBILE OVERLAY BACKDROP -->
-<div class="nav-overlay" id="navOverlay"></div>
-<!-- HEADER -->
-<header>
-<div class="nav-container">
-<a class="logo" href="/">
-<span class="logo-icon"></span>
-Hamza Irfan<span>.</span>
-</a>
-<button aria-label="Toggle menu" class="menu-toggle" id="menuToggle">☰</button>
-<nav class="nav-links" id="navLinks">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#testimonials">Testimonials</a>
-<a href="#contact">Contact</a>
-</nav>
-</div>
+
+<!-- HEADER WITH MOBILE DRAWER -->
+<header class="header-wrapper">
+  <nav class="pill-nav">
+    <!-- Brand Logo -->
+    <a href="#" class="nav-logo">
+      Hamza Irfan<span class="dot-badge"></span>
+    </a>
+
+    <!-- Desktop Navigation Menu -->
+    <div class="nav-menu">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" class="nav-btn">Contact</a>
+    </div>
+
+    <!-- Hamburger Toggle Button (Mobile Only) -->
+    <button class="hamburger-btn" id="menuToggle" aria-label="Toggle Navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <a href="#" class="nav-logo">
+        Hamza Irfan<span class="dot-badge"></span>
+      </a>
+      <button class="close-btn" id="menuClose" aria-label="Close Navigation">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#about" class="drawer-link">About</a>
+      <a href="#services" class="drawer-link">Services</a>
+      <a href="#skills" class="drawer-link">Skills</a>
+      <a href="#projects" class="drawer-link">Projects</a>
+      <a href="#testimonials" class="drawer-link">Testimonials</a>
+      <a href="#contact" class="drawer-btn">Contact</a>
+    </div>
+  </div>
+
+  <!-- Overlay Mask -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
 </header>
+
 <!-- HOMEPAGE LAYOUT -->
 <!-- HERO SECTION WITH ANIMATED FLOATING SHAPES -->
 <div class="hero-wrapper">
@@ -38,16 +68,16 @@ Hamza Irfan<span>.</span>
 <p>WordPress & WooCommerce Developer specializing in custom development, Elementor websites, ACF Pro solutions, REST APIs, and high-performance web experiences.</p>
 <div class="hero-btns">
 <a class="btn-primary" href="#projects">View Projects</a>
-<a class="btn-secondary" href="#contact">Let's Talk</a>
+<a class="btn-secondary" href="#contact">Get a Quote</a>
 </div>
 </div>
 <div class="hero-image-container reveal">
 <div class="glow-orb"></div>
 <div class="floating-object float-1">
-<span class="dot"></span> Custom WordPress Development
+<span class="dot"></span> 99+ Performance Score
           </div>
 <div class="floating-object float-2">
-<span class="dot" style="background:#818cf8;"></span> WooCommerce &amp; API Integration
+<span class="dot" style="background:#818cf8;"></span> Clean & Scalable Code
           </div>
 <img alt="Developer Portfolio" class="hero-img" src="./index_files/image1786224199.png">
 </div>
@@ -95,67 +125,100 @@ Hamza Irfan<span>.</span>
     </p>
   </div>
 
-  <div class='services-grid'>
+  <div class="services-grid">
 
     <!-- Service 1 -->
-    <div class='service-card'>
-      <div class='service-icon'>
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <polyline points="16 18 22 12 16 6"></polyline>
-          <polyline points="8 6 2 12 8 18"></polyline>
-        </svg>
+    <div class="service-card">
+      <div class="service-header">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <span class="service-badge">Core Service</span>
       </div>
       <h3>Custom WordPress Development</h3>
-      <p>
-        Custom WordPress websites, themes, plugins, and ACF-powered solutions built around your business requirements. I also troubleshoot and fix WordPress issues, bugs, conflicts, and existing website functionality.
-      </p>
+      <p>Bespoke themes, plugins, and ACF Pro architecture tailored to your complex requirements—plus fast bug fixes and code optimization.</p>
+      
+      <div class="service-tags">
+        <span>PHP</span>
+        <span>ACF Pro</span>
+        <span>Custom Themes</span>
+        <span>Bug Fixes</span>
+      </div>
     </div>
 
     <!-- Service 2 -->
-    <div class='service-card'>
-      <div class='service-icon'>
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect>
-          <line x1="3" x2="21" y1="9" y2="9"></line>
-          <line x1="9" x2="9" y1="21" y2="9"></line>
-        </svg>
+    <div class="service-card">
+      <div class="service-header">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect>
+            <line x1="3" x2="21" y1="9" y2="9"></line>
+            <line x1="9" x2="9" y1="21" y2="9"></line>
+          </svg>
+        </div>
+        <span class="service-badge">Elementor Service</span>
       </div>
-      <h3>Elementor &amp; Website Development</h3>
-      <p>
-        Modern, responsive websites built with Elementor, including custom sections, widgets, templates, dynamic content, and advanced functionality tailored to your needs.
-      </p>
+      <h3>Elementor &amp; Dynamic UI Build</h3>
+      <p>High-performance, pixel-perfect Elementor websites built with custom widgets, dynamic loop templates, and zero bloat.</p>
+      
+      <div class="service-tags">
+        <span>Elementor Pro</span>
+        <span>Dynamic Tags</span>
+        <span>Loop Builders</span>
+        <span>Responsive UI</span>
+      </div>
     </div>
 
     <!-- Service 3 -->
-    <div class='service-card'>
-      <div class='service-icon'>
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-          <line x1="3" x2="21" y1="6" y2="6"></line>
-          <path d="M16 10a4 4 0 0 1-8 0"></path>
-        </svg>
+    <div class="service-card">
+      <div class="service-header">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" x2="21" y1="6" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+        </div>
+        <span class="service-badge">E-Commerce</span>
       </div>
-      <h3>WooCommerce Solutions</h3>
-      <p>
-        Powerful WooCommerce solutions including custom checkout workflows, dynamic pricing, product logic, order management, and payment gateway integrations.
-      </p>
+      <h3>WooCommerce Architecture</h3>
+      <p>Tailored checkout flows, custom validation rules, dynamic pricing, payment gateway integrations, and order hook overrides.</p>
+      
+      <div class="service-tags">
+        <span>WooCommerce</span>
+        <span>Checkout Hooks</span>
+        <span>Gateways</span>
+        <span>Custom Logic</span>
+      </div>
     </div>
 
     <!-- Service 4 -->
-    <div class='service-card'>
-      <div class='service-icon'>
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-        </svg>
+    <div class="service-card">
+      <div class="service-header">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+        </div>
+        <span class="service-badge">API Integration</span>
       </div>
-      <h3>API &amp; Third-Party Integrations</h3>
-      <p>
-        Seamless integration with REST APIs, CRMs, external platforms, webhooks, and business systems to automate workflows and keep your website connected.
-      </p>
+      <h3>API &amp; Third-Party Integration</h3>
+      <p>Connecting your website with REST APIs, CRMs (ActiveCampaign, HubSpot), automated webhooks, and external microservices.</p>
+      
+      <div class="service-tags">
+        <span>REST API</span>
+        <span>Webhooks</span>
+        <span>CRMs</span>
+        <span>Make / Zapier</span>
+      </div>
     </div>
 
   </div>
+
 </section>
 
 <!-- SKILLS SETS SECTION -->
@@ -201,113 +264,273 @@ Hamza Irfan<span>.</span>
 </div>
 </div>
 </section>
-<!-- FEATURED PROJECTS SECTION (IMAGE MATCHED DESIGN) -->
+
+<!-- FEATURED PROJECTS SECTION -->
 <section class="section-padding reveal" id="projects">
-<h2 class="section-title">Featured Projects</h2>
-<p class="section-subtitle">Explore recent custom applications and web builds.</p>
-<div id="portfolioGrid">
-<div class="section" id="main"><div class="widget Blog" data-version="1" id="Blog1">
-<article class="portfolio-card">
-<img class="portfolio-thumbnail" src="./index_files/image.png">
-<div class="portfolio-content">
-<div class="portfolio-info">
-<h3 class="portfolio-title"><a href="/project-duffel-flights.html">Duffel Flights API Website</a></h3>
-<div class="portfolio-snippet">Web Design, App Design</div>
-</div>
-<a aria-label="View Project" class="circle-arrow-btn" href="/project-duffel-flights.html"><svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg></a>
-</div>
-</article>
-<article class="portfolio-card">
-<img class="portfolio-thumbnail" src="./index_files/flooma.png">
-<div class="portfolio-content">
-<div class="portfolio-info">
-<h3 class="portfolio-title"><a href="/project-flooma.html">Flooma A.I </a></h3>
-<div class="portfolio-snippet">Web Design, App Design</div>
-</div>
-<a aria-label="View Project" class="circle-arrow-btn" href="/project-flooma.html"><svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg></a>
-</div>
-</article>
-<article class="portfolio-card">
-<img class="portfolio-thumbnail" src="./index_files/ticketkite.png">
-<div class="portfolio-content">
-<div class="portfolio-info">
-<h3 class="portfolio-title"><a href="/project-ticketkite.html"> Theater/Ticketkite</a></h3>
-<div class="portfolio-snippet">Web Design, App Design</div>
-</div>
-<a aria-label="View Project" class="circle-arrow-btn" href="/project-ticketkite.html"><svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg></a>
-</div>
-</article>
-<article class="portfolio-card">
-<img class="portfolio-thumbnail" src="./index_files/gameplan.png">
-<div class="portfolio-content">
-<div class="portfolio-info">
-<h3 class="portfolio-title"><a href="/project-gameplan.html">Game Plan</a></h3>
-<div class="portfolio-snippet">Web Design, App Design</div>
-</div>
-<a aria-label="View Project" class="circle-arrow-btn" href="/project-gameplan.html"><svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg></a>
-</div>
-</article>
-<article class="portfolio-card">
-<img class="portfolio-thumbnail" src="./index_files/product_configurator.png">
-<div class="portfolio-content">
-<div class="portfolio-info">
-<h3 class="portfolio-title"><a href="/project-configurator.html">Product configurator woocommerce/wordpress plugin</a></h3>
-<div class="portfolio-snippet">Web Design, App Design</div>
-</div>
-<a aria-label="View Project" class="circle-arrow-btn" href="/project-configurator.html"><svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg></a>
-</div>
-</article>
-<article class="portfolio-card">
-<img class="portfolio-thumbnail" src="./index_files/vbargain.png">
-<div class="portfolio-content">
-<div class="portfolio-info">
-<h3 class="portfolio-title"><a href="/project-vbargain.html">V bargain woocommerce/wordpress plugin</a></h3>
-<div class="portfolio-snippet">Web Design, App Design</div>
-</div>
-<a aria-label="View Project" class="circle-arrow-btn" href="/project-vbargain.html"><svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg></a>
-</div>
-</article>
-<article class="portfolio-card">
-  <img class="portfolio-thumbnail" src="./index_files/corporate_gift_shop.png" alt="Corporate gift shop website">
-  <div class="portfolio-content">
-    <div class="portfolio-info">
-      <h3 class="portfolio-title"><a href="/project-corporate-gift-shop.html">Corporate gift shop website</a></h3>
-      <div class="portfolio-snippet">Web Design, App Design</div>
+  <h2 class="section-title">Featured Projects</h2>
+  <p class="section-subtitle">Explore recent custom applications and web builds.</p>
+  
+  <div id="portfolioGrid">
+    <div class="section" id="main">
+      <div class="widget Blog" data-version="1" id="Blog1">
+        
+        <!-- Project 1 -->
+        <article class="portfolio-card">
+          <div class="browser-header">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+          </div>
+          <div class="image-viewport">
+            <img class="portfolio-thumbnail" src="./index_files/duffel.png" alt="Duffel Flights API Website">
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-info">
+              <div class="portfolio-info-snippet-container">
+                <div class="portfolio-snippet">WooCommerce Development</div>
+                <div class="portfolio-snippet">API Integration</div>
+                <div class="portfolio-snippet">Plugin Development</div>
+              </div>
+              <h3 class="portfolio-title"><a href="/project-duffel-flights.html">Duffel Flights API Website</a></h3>
+            </div>
+            <a aria-label="View Project" class="circle-arrow-btn" href="/project-duffel-flights.html">
+              <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="portfolio-card">
+          <div class="browser-header">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+          </div>
+          <div class="image-viewport">
+            <img class="portfolio-thumbnail" src="./index_files/flooma.png" alt="Flooma A.I">
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-info">
+              <div class="portfolio-info-snippet-container">
+                <div class="portfolio-snippet">Web Design</div>
+                <div class="portfolio-snippet">Theme Development</div>
+              </div>
+              <h3 class="portfolio-title"><a href="/project-flooma.html">Flooma A.I</a></h3>
+            </div>
+            <a aria-label="View Project" class="circle-arrow-btn" href="/project-flooma.html">
+              <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="portfolio-card">
+          <div class="browser-header">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+          </div>
+          <div class="image-viewport">
+            <img class="portfolio-thumbnail" src="./index_files/ticketkite.png" alt="Theater/Ticketkite">
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-info">
+              <div class="portfolio-info-snippet-container">
+                <div class="portfolio-snippet">WooCommerce Development</div>
+                <div class="portfolio-snippet">Theater Design</div>
+                <div class="portfolio-snippet">Theme Development</div>
+                <div class="portfolio-snippet">Custom Solution</div>
+                <div class="portfolio-snippet">API Integration</div>
+              </div>
+              <h3 class="portfolio-title"><a href="/project-ticketkite.html">Theater/Ticketkite</a></h3>
+            </div>
+            <a aria-label="View Project" class="circle-arrow-btn" href="/project-ticketkite.html">
+              <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="portfolio-card">
+          <div class="browser-header">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+          </div>
+          <div class="image-viewport">
+            <img class="portfolio-thumbnail" src="./index_files/gameplan.png" alt="Game Plan">
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-info">
+              <div class="portfolio-info-snippet-container">
+                <div class="portfolio-snippet">Wordpress Development</div>
+                <div class="portfolio-snippet">Elementor Development</div>
+              </div>
+              <h3 class="portfolio-title"><a href="/project-gameplan.html">Game Plan</a></h3>
+            </div>
+            <a aria-label="View Project" class="circle-arrow-btn" href="/project-gameplan.html">
+              <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="portfolio-card">
+          <div class="browser-header">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+          </div>
+          <div class="image-viewport">
+            <img class="portfolio-thumbnail" src="./index_files/product_configurator.png" alt="Product configurator plugin">
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-info">
+              <div class="portfolio-info-snippet-container">
+                <div class="portfolio-snippet">Woocommerce Development</div> 
+                <div class="portfolio-snippet">Plugin Development</div> 
+                <div class="portfolio-snippet">Custom Solution</div>
+              </div>
+              <h3 class="portfolio-title"><a href="/project-configurator.html">Product configurator woocommerce/wordpress plugin</a></h3>
+            </div>
+            <a aria-label="View Project" class="circle-arrow-btn" href="/project-configurator.html">
+              <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="portfolio-card">
+          <div class="browser-header">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+          </div>
+          <div class="image-viewport">
+            <img class="portfolio-thumbnail" src="./index_files/vbargain.png" alt="V bargain plugin">
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-info">
+              <div class="portfolio-info-snippet-container">
+                <div class="portfolio-snippet">Woocommerce Development</div>
+                <div class="portfolio-snippet">Plugin Development</div>
+                <div class="portfolio-snippet">Custom Solution</div>
+              </div>
+              <h3 class="portfolio-title"><a href="/project-vbargain.html">V bargain woocommerce/wordpress plugin</a></h3>
+            </div>
+            <a aria-label="View Project" class="circle-arrow-btn" href="/project-vbargain.html">
+              <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 7 -->
+        <article class="portfolio-card">
+          <div class="browser-header">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+          </div>
+          <div class="image-viewport">
+            <img class="portfolio-thumbnail" src="./index_files/corporate_gift_shop.png" alt="Corporate gift shop website">
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-info">
+              <div class="portfolio-info-snippet-container">
+                <div class="portfolio-snippet">Woocommerce Development</div>
+                <div class="portfolio-snippet">Plugin Development</div>
+                <div class="portfolio-snippet">Custom Solution</div> 
+                <div class="portfolio-snippet">API Integration</div>
+              </div>
+              <h3 class="portfolio-title"><a href="/project-corporate-gift-shop.html">Corporate gift shop website</a></h3>
+            </div>
+            <a aria-label="View Project" class="circle-arrow-btn" href="/project-corporate-gift-shop.html">
+              <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 8 -->
+        <article class="portfolio-card">
+          <div class="browser-header">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+          </div>
+          <div class="image-viewport">
+            <img class="portfolio-thumbnail" src="./index_files/herhealth.png" alt="Herhealth website">
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-info">
+              <div class="portfolio-info-snippet-container">
+                <div class="portfolio-snippet">Woocommerce Development</div>
+                <div class="portfolio-snippet">Plugin Development</div>
+                <div class="portfolio-snippet">Custom Solution</div>
+                <div class="portfolio-snippet">Pharma</div>
+              </div>
+              <h3 class="portfolio-title"><a href="/project-herhealth.html">Herhealth website</a></h3>
+            </div>
+            <a aria-label="View Project" class="circle-arrow-btn" href="/project-herhealth.html">
+              <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 9 -->
+        <article class="portfolio-card">
+          <div class="browser-header">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+          </div>
+          <div class="image-viewport">
+            <img class="portfolio-thumbnail" src="./index_files/orange_sonatel_payment_gateway.png" alt="Orange sonatel payment gateway wordpress/woocommerce plugin">
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-info">
+              <div class="portfolio-info-snippet-container">
+                <div class="portfolio-snippet">Woocommerce Development</div> 
+                <div class="portfolio-snippet">Plugin Development</div>
+                <div class="portfolio-snippet">Custom Solution</div> 
+                <div class="portfolio-snippet">Payment Gateway</div>
+              </div>
+              <h3 class="portfolio-title"><a href="project-orange-sonatel-payment-gateway.html">Orange sonatel payment gateway wordpress/woocommerce plugin</a></h3>
+            </div>
+            <a aria-label="View Project" class="circle-arrow-btn" href="project-orange-sonatel-payment-gateway.html">
+              <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 10 -->
+        <article class="portfolio-card">
+          <div class="browser-header">
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+          </div>
+          <div class="image-viewport">
+            <img class="portfolio-thumbnail" src="./index_files/lavanno.png" alt="Lavanno merit api plugin">
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-info">
+              <div class="portfolio-info-snippet-container">
+                <div class="portfolio-snippet">Wordpress Development</div> 
+                <div class="portfolio-snippet">Plugin Development</div>
+                <div class="portfolio-snippet">Custom Solution</div>
+                <div class="portfolio-snippet">API Integration</div> 
+              </div>
+              <h3 class="portfolio-title"><a href="project-lavanno-merit-api.html">Lavanno merit api plugin</a></h3>
+            </div>
+            <a aria-label="View Project" class="circle-arrow-btn" href="project-lavanno-merit-api.html">
+              <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
     </div>
-    <a aria-label="View Project" class="circle-arrow-btn" href="/project-corporate-gift-shop.html">
-      <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path>
-      </svg>
-    </a>
   </div>
-</article>
-<article class="portfolio-card">
-  <img class="portfolio-thumbnail" src="./index_files/herhealth.png" alt="Herhealth website">
-  <div class="portfolio-content">
-    <div class="portfolio-info">
-      <h3 class="portfolio-title"><a href="/project-herhealth.html">Herhealth website</a></h3>
-      <div class="portfolio-snippet">Web Design, App Design</div>
-    </div>
-    <a aria-label="View Project" class="circle-arrow-btn" href="/project-herhealth.html">
-      <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path>
-      </svg>
-    </a>
-  </div>
-</article>
-<article class="portfolio-card">
-  <img class="portfolio-thumbnail" src="./index_files/orange_sonatel_payment_gateway.png" alt="Orange sonatel payment gateway wordpress/woocommerce plugin">
-  <div class="portfolio-content">
-    <div class="portfolio-info">
-      <h3 class="portfolio-title"><a href="project-orange-sonatel-payment-gateway.html">Orange sonatel payment gateway wordpress/woocommerce plugin</a></h3>
-      <div class="portfolio-snippet">Web Design, App Design</div>
-    </div>
-    <a aria-label="View Project" class="circle-arrow-btn" href="project-orange-sonatel-payment-gateway.html">
-      <svg class="icon-small" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path>
-      </svg>
-    </a>
-  </div>
-</article>
-</div></div>
-</div>
 </section>
 
 <!-- TESTIMONIALS SECTION -->
@@ -447,28 +670,84 @@ Hamza Irfan<span>.</span>
 <div class="slider-pagination" id="testimonialDots"></div>
 </section>
 <!-- CONTACT SECTION -->
+<!-- CONTACT SECTION -->
 <section class="section-padding reveal" id="contact">
-<h2 class="section-title">Get In Touch</h2>
-<p class="section-subtitle">Have a project or technical inquiry? Reach out directly below.</p>
-<div class="contact-wrapper">
-<form id="contactForm">
-<input name="access_key" type="hidden" value="a5814c4b-ae24-4b65-80e0-f04c8d7ba595">
-<div class="form-group">
-<label for="name">Name</label>
-<input id="name" name="name" required="required" type="text">
-</div>
-<div class="form-group">
-<label for="email">Email Address</label>
-<input id="email" name="email" required="required" type="email">
-</div>
-<div class="form-group">
-<label for="message">Message</label>
-<textarea id="message" name="message" required="required" rows="5"></textarea>
-</div>
-<button class="btn-primary" style="width:100%;" type="submit">Send Message</button>
-<div id="form-result" style="margin-top:1rem; text-align:center;"></div>
-</form>
-</div>
+  <h2 class="section-title">Get In Touch</h2>
+  <p class="section-subtitle">Have a project or technical inquiry? Reach out directly below.</p>
+  
+  <div class="contact-container">
+    <!-- Left Column: Contact Details & Info Cards -->
+    <div class="contact-info">
+      <!-- Card 1: Response Expectation -->
+      <div class="info-card">
+        <div class="info-icon">
+          <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+          </svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Response Time</span>
+          <span class="info-value">Within 24 Hours</span>
+        </div>
+      </div>
+
+      <!-- Option A: Technical Inquiry Workflow -->
+      <div class="info-card">
+        <div class="info-icon">
+          <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+          </svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Inquiry Scope</span>
+          <span class="info-value">Requirement & Spec Review</span>
+        </div>
+      </div>
+
+      <!-- Option B: Direct Communication Channel -->
+      <div class="info-card">
+        <div class="info-icon">
+          <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Direct Contact</span>
+          <span class="info-value">Form Routed to Primary Inbox</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Styled Form Wrapper -->
+    <div class="contact-form-wrapper">
+      <form id="contactForm">
+        <input name="access_key" type="hidden" value="a5814c4b-ae24-4b65-80e0-f04c8d7ba595">
+        
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" placeholder="" required="required" type="text">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" placeholder="" required="required" type="email">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="" required="required" rows="4"></textarea>
+        </div>
+
+        <button class="btn-primary-contact" type="submit">
+          <span>Send Message</span>
+          <svg class="btn-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+        <div id="form-result"></div>
+      </form>
+    </div>
+  </div>
 </section>
 </div>
 <!-- SINGLE POST VIEW -->

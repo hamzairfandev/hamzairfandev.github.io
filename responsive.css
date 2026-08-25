@@ -1,8 +1,16 @@
 /* ==========================================================================
 RESPONSIVE MEDIA QUERIES & FIXED MOBILE MENU
 ========================================================================== */
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
 @media (max-width: 992px) {
-.hero { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; padding: 5rem 2rem; }
+.hero { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; padding: 8rem 2rem 5rem 2rem; }
 .hero-content p { margin: 0 auto 2rem auto; }
 .hero-btns { justify-content: center; flex-direction: column; }
 .hero-btns a { display: block; width: 100%; }
@@ -15,6 +23,35 @@ RESPONSIVE MEDIA QUERIES & FIXED MOBILE MENU
 .about-image-card-mobile { display: block; margin-bottom: 2.5rem; }
 .section-padding { padding: 4rem 0; }
 }
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile phones */
+  }
+}
+
+/* Responsive Handling */
+@media (max-width: 868px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .contact-form-wrapper {
+    padding: 24px;
+  }
+
+  #Blog1 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .image-viewport {
+    height: 220px;
+  }
+
+}
+
 @media (max-width: 768px) {
 .menu-toggle { display: block; }
 .hero-content h1 { min-height: 150px; }
@@ -58,4 +95,17 @@ padding: 1.75rem;
 .testimonial-text {
 font-size: 1rem;
 }
+
+.pill-nav {
+padding: 6px 8px 6px 18px;
+}
+
+.nav-menu {
+display: none; /* Hide standard menu on mobile */
+}
+
+.hamburger-btn {
+display: flex; /* Show hamburger icon inside the pill on mobile */
+}
+
 }

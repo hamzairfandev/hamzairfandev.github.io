@@ -1,38 +1,3 @@
-// Fixed Mobile Navigation & Scroll Lock Logic
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
-const navOverlay = document.getElementById('navOverlay');
-
-function closeMenu() {
-  navLinks.classList.remove('open');
-  navOverlay.classList.remove('active');
-  document.body.classList.remove('nav-active');
-  menuToggle.innerHTML = '&#9776;';
-}
-
-function openMenu() {
-  navLinks.classList.add('open');
-  navOverlay.classList.add('active');
-  document.body.classList.add('nav-active');
-  menuToggle.innerHTML = '&#10005;';
-}
-
-if (menuToggle && navLinks && navOverlay) {
-  menuToggle.addEventListener('click', () => {
-    if (navLinks.classList.contains('open')) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  });
-
-  navOverlay.addEventListener('click', closeMenu);
-
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-}
-
 // Scroll Animations
 function revealOnScroll() {
   const reveals = document.querySelectorAll('.reveal');
@@ -66,7 +31,6 @@ if (document.readyState === 'loading') {
 window.addEventListener('scroll', revealOnScroll, { passive: true });
 
 // Testimonials Slider
-//<![CDATA[
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("testimonialTrack");
   const slides = document.querySelectorAll(".testimonial-slide");
@@ -152,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startAutoplay();
 });
-//]]>
 
 // Contact Form AJAX Handler
 const contactForm = document.getElementById('contactForm');
@@ -268,4 +231,38 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.3 });
 
   observer.observe(statsContainer);
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menuToggle');
+  const menuClose = document.getElementById('menuClose');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const drawerOverlay = document.getElementById('drawerOverlay');
+  const drawerLinks = document.querySelectorAll('.drawer-link, .drawer-btn');
+
+  // Open Drawer Function
+  const openMenu = () => {
+    mobileDrawer.classList.add('active');
+    drawerOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevents background body scrolling
+  };
+
+  // Close Drawer Function
+  const closeMenu = () => {
+    mobileDrawer.classList.remove('active');
+    drawerOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  // Event Listeners
+  if (menuToggle) menuToggle.addEventListener('click', openMenu);
+  if (menuClose) menuClose.addEventListener('click', closeMenu);
+  if (drawerOverlay) drawerOverlay.addEventListener('click', closeMenu);
+
+  // Close menu automatically when any item inside the drawer is clicked
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
 });

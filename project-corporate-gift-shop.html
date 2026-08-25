@@ -8,29 +8,58 @@
 
 </head>
 <body>
-<!-- MOBILE OVERLAY BACKDROP -->
-<div class="nav-overlay" id="navOverlay"></div>
-<!-- HEADER -->
-<header>
-<div class="nav-container">
-<a class="logo" href="/">
-<span class="logo-icon"></span>
-        Hamza Irfan<span>.</span>
-</a>
-<button aria-label="Toggle menu" class="menu-toggle" id="menuToggle">☰</button>
-<nav class="nav-links" id="navLinks">
-<a href="/#about">About</a>
-<a href="/#services">Services</a>
-<a href="/#skills">Skills</a>
-<a href="/#projects">Projects</a>
-<a href="/#testimonials">Testimonials</a>
-<a href="/#contact">Contact</a>
-</nav>
-</div>
+
+<!-- HEADER WITH MOBILE DRAWER -->
+<header class="header-wrapper">
+  <nav class="pill-nav">
+    <!-- Brand Logo -->
+    <a href="/" class="nav-logo">
+      Hamza Irfan<span class="dot-badge"></span>
+    </a>
+
+    <!-- Desktop Navigation Menu -->
+    <div class="nav-menu">
+      <a href="/#about" class="nav-link">About</a>
+      <a href="/#services" class="nav-link">Services</a>
+      <a href="/#skills" class="nav-link">Skills</a>
+      <a href="/#projects" class="nav-link">Projects</a>
+      <a href="/#testimonials" class="nav-link">Testimonials</a>
+      <a href="/#contact" class="nav-btn">Contact</a>
+    </div>
+
+    <!-- Hamburger Toggle Button (Mobile Only) -->
+    <button class="hamburger-btn" id="menuToggle" aria-label="Toggle Navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <a href="/" class="nav-logo">
+        Hamza Irfan<span class="dot-badge"></span>
+      </a>
+      <button class="close-btn" id="menuClose" aria-label="Close Navigation">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="/#about" class="drawer-link">About</a>
+      <a href="/#services" class="drawer-link">Services</a>
+      <a href="/#skills" class="drawer-link">Skills</a>
+      <a href="/#projects" class="drawer-link">Projects</a>
+      <a href="/#testimonials" class="drawer-link">Testimonials</a>
+      <a href="/#contact" class="drawer-btn">Contact</a>
+    </div>
+  </div>
+
+  <!-- Overlay Mask -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
 </header>
+
 <!-- SINGLE POST VIEW -->
 <div class="container">
-<div class="single-layout">
+<div class="section-padding single-layout">
 <main>
 <div class="section" id="post-main"><div class="widget Blog">
 <article class="single-post">
@@ -79,9 +108,9 @@
       <img alt="Duffel Flights API Website" class="sidebar-thumb" src="./project-duffel-flights_files/image.png">
       <div class="sidebar-item-title">Duffel Flights API Website</div>
     </a>
-    <a class="sidebar-item" href="/project-configurator.html">
-      <img alt="Product configurator woocommerce/wordpress plugin" class="sidebar-thumb" src="./project-configurator_files/Screenshot_11.png">
-      <div class="sidebar-item-title">Product configurator woocommerce/wordpress plugin</div>
+    <a class="sidebar-item" href="/project-trustcenter-order-crm.html">
+      <img alt="Trust center order crm wordpress/woocommerce plugin" class="sidebar-thumb" src="./project-trustcenter-order-crm_files/Screenshot_7.png">
+      <div class="sidebar-item-title">Trust center order crm wordpress/woocommerce plugin</div>
     </a>
   </div>
 </div>
