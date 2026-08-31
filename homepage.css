@@ -93,9 +93,10 @@ align-items: center;
 position: relative;
 z-index: 2;
 width: 100%;
-max-width: 360px;
-height: 360px;
-object-position: center 13%;
+/*max-width: 360px;*/
+/*height: 360px;*/
+height: 400px;
+object-position: center 10%;
 object-fit: cover;
 border-radius: 24px;
 border: 2px solid rgba(var(--accent-color-rgb), 0.3);
@@ -123,7 +124,7 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.5);
   height: 8px;
   border-radius: 50%;
   background: var(--accent-color);
-  box-shadow: 0 0 8px var(--accent-color); /* Subtle teal glow */
+  box-shadow: 0 0 8px var(--accent-color);
 }
 .float-1 {
 top: 10%;
