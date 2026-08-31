@@ -302,6 +302,59 @@ overflow: hidden;
   visibility: visible;
 }
 
+
+.nav-link {
+  position: relative;
+  padding-bottom: 4px; /* room for the underline */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.active {
+  color: var(--text-main); /* or var(--accent-color) if you want the text itself to pop too */
+}
+
+/* Same treatment for mobile drawer links */
+.drawer-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.drawer-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.drawer-link:hover::after,
+.drawer-link.active::after {
+  transform: scaleX(1);
+}
+
+
 /* ==========================================================================
 CONTAINERS & SECTIONS
 ========================================================================== */

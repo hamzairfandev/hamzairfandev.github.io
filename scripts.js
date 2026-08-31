@@ -30,6 +30,47 @@ if (document.readyState === 'loading') {
 
 window.addEventListener('scroll', revealOnScroll, { passive: true });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.nav-link');
+  const drawerLinks = document.querySelectorAll('.drawer-link');
+  const sections = document.querySelectorAll('section[id]');
+
+  function setActiveLink(id) {
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+    });
+    drawerLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+    });
+  }
+
+  // Scrollspy: highlight nav based on which section is in view
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveLink(entry.target.id);
+        }
+      });
+    },
+    {
+      // Triggers when section is roughly in the upper-middle of viewport
+      rootMargin: '-40% 0px -55% 0px',
+      threshold: 0
+    }
+  );
+
+  sections.forEach(section => observer.observe(section));
+
+  // Handle initial load with a hash in the URL (e.g. yoursite.com/#about)
+  const initialHash = window.location.hash.replace('#', '');
+  if (initialHash) {
+    setActiveLink(initialHash);
+  } else if (sections.length) {
+    setActiveLink(sections[0].id); // default to first section (e.g. hero/about) if no hash
+  }
+});
+
 // Testimonials Slider
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("testimonialTrack");
