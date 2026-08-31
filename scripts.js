@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (initialHash) {
     setActiveLink(initialHash);
   } else if (sections.length) {
-    setActiveLink(sections[0].id); // default to first section (e.g. hero/about) if no hash
+    //setActiveLink(sections[0].id); // default to first section (e.g. hero/about) if no hash
   }
 });
 
